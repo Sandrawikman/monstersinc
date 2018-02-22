@@ -46,6 +46,8 @@ public class Main {
                 System.out, Charset.forName("UTF8"));
         terminal.enterPrivateMode();
         terminal.setCursorVisible(false);
+      //  terminal.applyBackgroundColor(Terminal.Color.GREEN);
+        terminal.applyForegroundColor(Terminal.Color.GREEN);
         while (true) {
             drawBoard();
             if(playerHasDied()){
@@ -127,7 +129,7 @@ public class Main {
     private void setupGame(int numberOfMonsters){
         //run once at start of new game
         monsters = new ArrayList<>();
-        player = new Player(10, 10, 'O');
+        player = new Player(10, 10, '\u2021');
         setupMonsters(numberOfMonsters);
     }
 

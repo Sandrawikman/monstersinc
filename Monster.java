@@ -3,7 +3,7 @@ package MonstersInc;
 public class Monster {
     private int xPos;
     private int yPos;
-    private char look = 'X';
+    private char look = '\u058e';
 
 
     public Monster(int x, int y){
