@@ -6,28 +6,29 @@ public class Player {
     private char look;
 
 
-    public Player(){
-        this.xPos =
+    public Player(int x, int y, char look){
+        this.xPos = x;
+        this.yPos = y;
+        this.look = look;
     }
-
-    private void move(){
-
+    public char getLook(){
+        return look;
     }
 
     public int getxPos() {
         return xPos;
     }
 
-    public void setxPos(int xPos) {
-        this.xPos = xPos;
+    public void setxPos(int change) {
+        this.xPos += change;
     }
 
     public int getyPos() {
         return yPos;
     }
 
-    public void setyPos(int yPos) {
-        this.yPos = yPos;
+    public void setyPos(int change) {
+        this.yPos += change  ;
     }
     public String toString(){
         return "Player is on x: " + getxPos() + " and y: " + getyPos();

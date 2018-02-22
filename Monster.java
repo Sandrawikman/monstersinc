@@ -3,28 +3,30 @@ package MonstersInc;
 public class Monster {
     private int xPos;
     private int yPos;
-    private char look;
+    private char look = 'X';
 
+
+    public Monster(int x, int y){
+        this.xPos = x;
+        this.yPos = y;
+    }
     public int getyPos() {
         return yPos;
     }
+    public char getLook(){
+        return look;
+    }
 
-    public void setyPos(int yPos) {
-        this.yPos = yPos;
+    public void setyPos(int change) {
+        this.yPos += change;
     }
     public int getxPos(){
         return xPos;
     }
-    public void setxPos(){
-
+    public void setxPos(int change){
+        this.xPos += change;
     }
 
-    private void move(){
-
-    }
-    private void findNextMove(){
-
-    }
     @Override
     public String toString(){
         return "This monster is on x: " + getxPos() + " and y: " + getyPos();
